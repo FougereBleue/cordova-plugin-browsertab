@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-package com.google.cordova.plugin.browsertab;
+package com.google.cordova.plugin.browsertabFix;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -41,11 +41,11 @@ import android.graphics.Color;
  * in-app browser tab. On Android, this means using the custom tabs support
  * library, if a supporting browser (e.g. Chrome) is available on the device.
  */
-public class BrowserTab extends CordovaPlugin {
+public class BrowserTabFix extends CordovaPlugin {
 
   public static final int RC_OPEN_URL = 101;
 
-  private static final String LOG_TAG = "BrowserTab";
+  private static final String LOG_TAG = "BrowserTabFix";
 
   private Color colorParser = new Color();
 

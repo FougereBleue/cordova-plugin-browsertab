@@ -1,4 +1,4 @@
-/*! @file CBTBrowserTab.m
+/*! @file CBTBrowserTabFix.m
     @brief Browser tab plugin for Cordova
     @copyright
         Copyright 2016 Google Inc. All Rights Reserved.
@@ -14,9 +14,9 @@
         limitations under the License.
  */
 
-#import "CBTBrowserTab.h"
+#import "CBTBrowserTabFix.h"
 
-@implementation CBTBrowserTab {
+@implementation CBTBrowserTabFix {
   SFSafariViewController *_safariViewController;
 }
 

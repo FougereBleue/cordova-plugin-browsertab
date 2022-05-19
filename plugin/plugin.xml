@@ -2,9 +2,9 @@
 <plugin
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="cordova-plugin-browsertab"
-    version="0.2.1">
-    <name>cordova-plugin-browsertab</name>
+    id="cordova-plugin-browsertabFix-fix"
+    version="0.2.4">
+    <name>cordova-plugin-browsertabFix-fix</name>
     <description>
         This plugin provides an interface to in-app browser tabs that exist on
         some mobile platforms, specifically Custom Tabs on Android and
@@ -12,39 +12,39 @@
     </description>
     <dependency id="cordova-plugin-compat" version="^1.0.0" />
 
-    <js-module name="BrowserTab" src="www/browsertab.js">
-        <clobbers target="cordova.plugins.browsertab" />
+    <js-module name="BrowserTabFix" src="www/browsertabFix.js">
+        <clobbers target="cordova.plugins.browsertabFix" />
     </js-module>
   
     <preference name="CUSTOM_TAB_COLOR_RGB" default="#ffffff" />
   
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
-            <feature name="BrowserTab">
+            <feature name="BrowserTabFix">
                 <param name="android-package"
-                    value="com.google.cordova.plugin.browsertab.BrowserTab" />
+                    value="com.google.cordova.plugin.browsertabFix.BrowserTabFix" />
             </feature>
         </config-file>
-        <source-file src="src/android/BrowserTab.java"
+        <source-file src="src/android/BrowserTabFix.java"
             target-dir="src/com/google/cordova/plugin" />
         <framework src="com.android.support:customtabs:23.3.0"/>
-        <framework src="src/android/BrowserTab.gradle" custom="true" type="gradleReference"/>
+        <framework src="src/android/BrowserTabFix.gradle" custom="true" type="gradleReference"/>
   
-        <source-file src="src/android/res/browsertab.xml" target-dir="res/values" />
-        <config-file target="res/values/browsertab.xml" parent="/*">
+        <source-file src="src/android/res/browsertabFix.xml" target-dir="res/values" />
+        <config-file target="res/values/browsertabFix.xml" parent="/*">
           <string name="CUSTOM_TAB_COLOR_RGB">$CUSTOM_TAB_COLOR_RGB</string>
         </config-file>
     </platform>
 
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
-            <feature name="BrowserTab">
-                <param name="ios-package" value="CBTBrowserTab" />
+            <feature name="BrowserTabFix">
+                <param name="ios-package" value="CBTBrowserTabFix" />
             </feature>
         </config-file>
 
-        <header-file src="src/ios/CBTBrowserTab.h" />
-        <source-file src="src/ios/CBTBrowserTab.m" />
+        <header-file src="src/ios/CBTBrowserTabFix.h" />
+        <source-file src="src/ios/CBTBrowserTabFix.m" />
 
         <framework src="SafariServices.framework" weak="true"/>
     </platform>

@@ -1,9 +1,9 @@
 {
-    "name": "cordova-plugin-browsertab-fix",
-    "version": "0.2.2",
+    "name": "cordova-plugin-browsertabFix-fix-fix",
+    "version": "0.2.4",
     "description": "In-app browser tabs for Android and iOS",
     "cordova": {
-        "id": "cordova-plugin-browsertab",
+        "id": "cordova-plugin-browsertabFix-fix-fix",
         "platforms": [
             "android"
         ]

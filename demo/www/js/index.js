@@ -28,12 +28,12 @@ var app = {
 
     var testURL = 'https://www.google.com';
 
-    document.querySelector('#browsertab').addEventListener('click', function(ev) {
-      cordova.plugins.browsertab.isAvailable(function(result) {
+    document.querySelector('#browsertabFix').addEventListener('click', function(ev) {
+      cordova.plugins.browsertabFix.isAvailable(function(result) {
         if (!result) {
           nobrowser.style.display = '';
         } else {
-          cordova.plugins.browsertab.openUrl(
+          cordova.plugins.browsertabFix.openUrl(
               testURL,
               function(successResp) {},
               function(failureResp) {
@@ -42,7 +42,7 @@ var app = {
               });
           // Uncomment to test the SVC close functionality. Normally this would
           // be done as the result of an incoming link.
-          //setTimeout(function() { cordova.plugins.browsertab.close() }, 3000);
+          //setTimeout(function() { cordova.plugins.browsertabFix.close() }, 3000);
         }
       },
       function(isAvailableError) {
@@ -56,11 +56,11 @@ var app = {
     });
 
     document.querySelector('#tabwithfallback').addEventListener('click', function(ev) {
-    cordova.plugins.browsertab.isAvailable(function(result) {
+    cordova.plugins.browsertabFix.isAvailable(function(result) {
         if (!result) {
           cordova.InAppBrowser.open(testURL, '_system');
         } else {
-          cordova.plugins.browsertab.openUrl(
+          cordova.plugins.browsertabFix.openUrl(
               testURL,
               function(successResp) {},
               function(failureResp) {

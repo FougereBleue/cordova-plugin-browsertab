@@ -1,4 +1,4 @@
-# cordova-plugin-browsertab
+# cordova-plugin-browsertabFix-fix
 
 Note: This is not an official Google product.
 
@@ -17,7 +17,7 @@ on iOS.
 
 To open a URL in an in-app browser tab on a compatible platform:
 
-    cordova.plugins.browsertab.openUrl('https://www.google.com');
+    cordova.plugins.browsertabFix.openUrl('https://www.google.com');
 
 This plugin is designed to complement cordova-plugin-inappbrowser. No fallback
 is triggered automatically, you need to test whether it will succeed, and then
@@ -31,11 +31,11 @@ Complete example with fallback handling:
     var testURL = 'https://www.google.com';
 
     document.querySelector("#tabwithfallback").addEventListener('click', function(ev) {
-    cordova.plugins.browsertab.isAvailable(function(result) {
+    cordova.plugins.browsertabFix.isAvailable(function(result) {
         if (!result) {
           cordova.InAppBrowser.open(testURL, '_system');
         } else {
-          cordova.plugins.browsertab.openUrl(
+          cordova.plugins.browsertabFix.openUrl(
               testURL,
               function(successResp) {},
               function(failureResp) {
@@ -56,7 +56,7 @@ Plugin can be customized by providing parameters during installation.
 You can customize i.e. custom tab background color by passing `CUSTOM_TAB_COLOR_RGB` variable in string RGB format:
 
 ```bash
-cordova plugin add cordova-plugin-browsertab --variable CUSTOM_TAB_COLOR_RGB="#ff0000"
+cordova plugin add cordova-plugin-browsertabFix-fix --variable CUSTOM_TAB_COLOR_RGB="#ff0000"
 ```
 
 List of available parameters:
@@ -83,7 +83,7 @@ Then from the root directory:
 During development if you want to make changes to the plugin you need to force
 a rebuild and add the plugin from source, like so (from the demo directory):
 
-    cordova plugin remove cordova-plugin-browsertab
+    cordova plugin remove cordova-plugin-browsertabFix-fix
     cordova plugin add ../plugin
 
 To refresh the platform build:
@@ -94,4 +94,4 @@ To refresh the platform build:
 To set breakpoints, etc, open the project in the code editor:
 
     cordova platform add ios
-    open platforms/ios/BrowserTabDemo.xcworkspace
+    open platforms/ios/BrowserTabFixDemo.xcworkspace

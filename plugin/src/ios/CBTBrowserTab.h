@@ -1,4 +1,4 @@
-/*! @file CBTBrowserTab.h
+/*! @file CBTBrowserTabFix.h
     @brief Browser tab plugin for Cordova
     @copyright
         Copyright 2016 Google Inc. All Rights Reserved.
@@ -17,7 +17,7 @@
 #import <Cordova/CDVPlugin.h>
 #import <SafariServices/SafariServices.h>
 
-@interface CBTBrowserTab : CDVPlugin
+@interface CBTBrowserTabFix : CDVPlugin
 
 - (void)isAvailable:(CDVInvokedUrlCommand *)command;
 - (void)openUrl:(CDVInvokedUrlCommand *)command;
