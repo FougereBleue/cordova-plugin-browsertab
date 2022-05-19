@@ -1,4 +1,4 @@
-# cordova-plugin-browsertabFix-fix
+# cordova-plugin-browsertab-fix
 
 Note: This is not an official Google product.
 
@@ -56,7 +56,7 @@ Plugin can be customized by providing parameters during installation.
 You can customize i.e. custom tab background color by passing `CUSTOM_TAB_COLOR_RGB` variable in string RGB format:
 
 ```bash
-cordova plugin add cordova-plugin-browsertabFix-fix --variable CUSTOM_TAB_COLOR_RGB="#ff0000"
+cordova plugin add cordova-plugin-browsertab-fix --variable CUSTOM_TAB_COLOR_RGB="#ff0000"
 ```
 
 List of available parameters:
@@ -83,7 +83,7 @@ Then from the root directory:
 During development if you want to make changes to the plugin you need to force
 a rebuild and add the plugin from source, like so (from the demo directory):
 
-    cordova plugin remove cordova-plugin-browsertabFix-fix
+    cordova plugin remove cordova-plugin-browsertab-fix
     cordova plugin add ../plugin
 
 To refresh the platform build:
